@@ -35,6 +35,11 @@ steps:
     coverage --check-coverage --lines 90 npm test
   displayName: 'Test coverage'
 
+- script: |
+    npm install -g coverage
+    coverage report
+  displayName: 'Generate report'
+
 - task: Docker@2
   displayName: Build and push image
   inputs:
