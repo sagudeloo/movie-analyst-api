@@ -39,7 +39,7 @@ steps:
   displayName: Build and push image
   inputs:
     containerRegistry: 'Docker hub'
-    repository: 'sagudeloo/movie-analyst-ui'
+    repository: 'sagudeloo/movie-analyst-api'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: '$(latest)'
