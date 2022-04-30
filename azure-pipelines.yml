@@ -35,15 +35,6 @@ steps:
     coverage --check-coverage --lines 90 npm test
   displayName: 'Test coverage'
 
-- script: |
-    npm install -g coverage
-    coverage report
-  displayName: 'Generate report'
-
-- script: |
-    bash <(curl -s https://codecov.io/bash)
-  displayName: 'Send report'
-
 - task: Docker@2
   displayName: Build and push image
   inputs:
